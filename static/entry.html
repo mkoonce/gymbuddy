@@ -25,8 +25,6 @@
 
     <!-- Custom styles for this template -->
     <link href="dist/css/carousel.css" rel="stylesheet">
-    <link href="dist/css/workout.css" rel="stylesheet">
-
   </head>
 <!-- NAVBAR
 ================================================== -->
@@ -58,15 +56,53 @@
       </div>
     </div>
 
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
 
-    <div class="container marketing">
+    <div class="container marketing" style="margin-top:90px">
+
+      <!-- Three columns of text below the carousel -->
       <div class="row" style="margin-top:-20px">
-        <div class="col-lg-4" style="margin-top:100px">
-            <h4><b>SCAN</b> &raquo; Info &raquo; Entry</h4>
+        <div class="col-lg-4">
+            <h4><a href="scan.html">Scan</a> &raquo; <a href="workout.html">Info</a> &raquo; <b>ENTRY</b></h4>
             <hr>
-            <input type="file" capture="camera" accept="image/*" id="cameraInput" name="cameraInput" align="center">
-            <a href="workout.html">Upload Photo</a></li>
-            <h3>To scan a QR code. First press "Choose File" to take a picture with your phone. And then press "Upload" to upload it.</h3>
+          <h2>Enter your workout</h2>
+
+          <div class="panel panel-default">
+            <div class="panel-heading">Round 1</div>
+            <div class="panel-body">
+              <form method='POST' action='#' role="form">
+                <div class="form-group">
+                  <label for="reps">Reps</label>
+                  <div class="input-group">
+                    <span class="input-group-btn">
+                      <input id="reps" type='button' value='-' class='qtyminus btn btn-default' field='reps' />
+                    </span>
+                      <input type='text' name='reps' value='0' class='qty form-control' />
+                    <span class="input-group-btn">
+                      <input type='button' value='+' class='qtyplus btn btn-default' field='reps' />
+                    </span>
+                  </div><!-- /input-group -->
+                </div><!-- /form-group -->
+
+                <div class="form-group">
+                  <label for="weight">Weight</label>
+                  <div class="input-group">
+                    <span class="input-group-btn">
+                      <input id="weight" type='button' value='-' class='qtyminus btn btn-default' field='weight' />
+                    </span>
+                      <input type='text' name='weight' value='0' class='qty form-control' />
+                    <span class="input-group-btn">
+                      <input type='button' value='+' class='qtyplus btn btn-default' field='weight' />
+                    </span>
+                  </div><!-- /input-group -->
+                </div><!-- /form-group -->
+              </form>
+            </div><!-- /panel-body -->
+          </div><!-- /panel -->
+          <a href="#" class="btn btn-default">Add another round</a>
+
         </div><!-- /.col-lg-4 -->
       </div><!-- /.row -->
     </div><!-- /.container -->
@@ -78,5 +114,6 @@
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="dist/js/bootstrap.min.js"></script>
     <script src="assets/js/docs.min.js"></script>
+    <script src="dist/js/gymbuddy.js"></script>
   </body>
 </html>
