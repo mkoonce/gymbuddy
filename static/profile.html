@@ -67,39 +67,41 @@
         <div class="col-lg-4">
           <h2>Profile</h2>
 
-          <div class="panel panel-default">
-            <div class="panel-heading">Round 1</div>
-            <div class="panel-body">
-              <form method='POST' action='#' role="form">
-                <div class="form-group">
-                  <label for="reps">Reps</label>
-                  <div class="input-group">
-                    <span class="input-group-btn">
-                      <input id="reps" type='button' value='-' class='qtyminus btn btn-default' field='reps' />
-                    </span>
-                      <input type='text' name='reps' value='0' class='qty form-control' />
-                    <span class="input-group-btn">
-                      <input type='button' value='+' class='qtyplus btn btn-default' field='reps' />
-                    </span>
-                  </div><!-- /input-group -->
-                </div><!-- /form-group -->
+          <div id="rounds">
+            <div class="panel panel-default">
+              <div class="panel-heading">Round 1</div>
+              <div class="panel-body">
+                <form method="POST" action="#" role="form">
+                  <div class="form-group">
+                    <label for="reps">Reps</label>
+                    <div class="input-group">
+                      <span class="input-group-btn">
+                        <input id="reps" type="button" value="-" class="qtyminus btn btn-default" field="reps" />
+                      </span>
+                        <input type="text" name="reps" value="0" class="qty form-control" />
+                      <span class="input-group-btn">
+                        <input type="button" value="+" class="qtyplus btn btn-default" field="reps" />
+                      </span>
+                    </div><!-- /input-group -->
+                  </div><!-- /form-group -->
 
-                <div class="form-group">
-                  <label for="weight">Weight</label>
-                  <div class="input-group">
-                    <span class="input-group-btn">
-                      <input id="weight" type='button' value='-' class='qtyminus btn btn-default' field='weight' />
-                    </span>
-                      <input type='text' name='weight' value='0' class='qty form-control' />
-                    <span class="input-group-btn">
-                      <input type='button' value='+' class='qtyplus btn btn-default' field='weight' />
-                    </span>
-                  </div><!-- /input-group -->
-                </div><!-- /form-group -->
-              </form>
-            </div><!-- /panel-body -->
-          </div><!-- /panel -->
-          <a href="#" class="btn btn-default">Add another round</a>
+                  <div class="form-group">
+                    <label for="weight">Weight</label>
+                    <div class="input-group">
+                      <span class="input-group-btn">
+                        <input id="weight" type="button" value="-" class="qtyminus btn btn-default" field="weight" />
+                      </span>
+                        <input type="text" name="weight" value="0" class="qty form-control" />
+                      <span class="input-group-btn">
+                        <input type="button" value="+" class="qtyplus btn btn-default" field="weight" />
+                      </span>
+                    </div><!-- /input-group -->
+                  </div><!-- /form-group -->
+                </form>
+              </div><!-- /panel-body -->
+            </div><!-- /panel -->
+          </div><!-- /rounds -->
+          <a class="btn btn-default" id="addanother">Add another round</a>
 
         </div><!-- /.col-lg-4 -->
       </div><!-- /.row -->
