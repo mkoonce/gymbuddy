@@ -9,7 +9,6 @@ jQuery(document).ready(function(){
 function updateButtons () {
 
 $('.qtyplus').click(function(e){
-        console.log('qty plus called');
         // Stop acting like a button
         e.preventDefault();
         // Get the field name
@@ -33,7 +32,6 @@ $(".qtyminus").click(function(e) {
     e.preventDefault();
     // Get the field name
     fieldName = $(this).attr('field');
-    console.log("minus button clicked on " + fieldName);
     // Get its current value
     var currentVal = parseInt($('input[name='+fieldName+']').val());
     // If it isn't undefined or its greater than 0
@@ -48,13 +46,17 @@ $(".qtyminus").click(function(e) {
     }
 });
 
+$('.deleteround').click(function() {
+    var id = $(this).attr('roundid');
+    var toDelete = $("#round" + id);
+    toDelete.remove();
+});
+
 };
 
 $('#addanother').click(function() {
     ++round_count;
     var addTo = $("#rounds");
-    console.log(addTo.html());
-    addTo.html(addTo.html() + '<div class="panel panel-default"><div class="panel-heading">Round ' + round_count + '</div><div class="panel-body"><form method="POST" action="#" role="form" id="form' + round_count + '"><div class="form-group"><label for="reps' + round_count + '">Reps</label><div class="input-group"><span class="input-group-btn"><input id="reps' + round_count + '" type="button" value="-" class="qtyminus btn btn-default" field="reps' + round_count + '" /></span><input type="text" name="reps' + round_count  + '" value="0" class="qty form-control" /><span class="input-group-btn"><input type="button" value="+" class="qtyplus btn btn-default" field="reps' + round_count + '" /></span></div><!-- /input-group --></div><!-- /form-group --><div class="form-group"><label for="weight">Weight ' + round_count + '</label><div class="input-group"><span class="input-group-btn"><input id="weight' + round_count + '" type="button" value="-" class="qtyminus btn btn-default" field="weight' + round_count + '" /></span><input type="text" name="weight' + round_count + '" value="0" class="qty form-control" /><span class="input-group-btn"><input type="button" value="+" class="qtyplus btn btn-default" field="weight' + round_count + '" /></span></div><!-- /input-group --></div><!-- /form-group --></form></div><!-- /panel-body --></div><!-- /panel -->');
+    addTo.html(addTo.html() + '<div class="panel panel-default" id="round' + round_count + '"><div class="panel-heading">Round ' + round_count + '</div><div class="panel-body"><form method="POST" action="#" role="form" id="form' + round_count + '"><div class="form-group"><label for="reps' + round_count + '">Reps</label><div class="input-group"><span class="input-group-btn"><input id="reps' + round_count + '" type="button" value="-" class="qtyminus btn btn-default" field="reps' + round_count + '" /></span><input type="text" name="reps' + round_count  + '" value="0" class="qty form-control" /><span class="input-group-btn"><input type="button" value="+" class="qtyplus btn btn-default" field="reps' + round_count + '" /></span></div><!-- /input-group --></div><!-- /form-group --><div class="form-group"><label for="weight">Weight</label><div class="input-group"><span class="input-group-btn"><input id="weight' + round_count + '" type="button" value="-" class="qtyminus btn btn-default" field="weight' + round_count + '" /></span><input type="text" name="weight' + round_count + '" value="0" class="qty form-control" /><span class="input-group-btn"><input type="button" value="+" class="qtyplus btn btn-default" field="weight' + round_count + '" /></span></div><!-- /input-group --></div><!-- /form-group --></form><a class="btn btn-default deleteround" roundid="' + round_count + '">- Delete round</a></div><!-- /panel-body --></div><!-- /panel -->');
     updateButtons();
 });
-
