@@ -26,6 +26,8 @@
     <!-- Custom styles for this template -->
     <link href="css/carousel.css" rel="stylesheet">
     <link href="css/workout.css" rel="stylesheet">
+    <link href="css/scan.css" rel="stylesheet">
+
 
   </head>
 <!-- NAVBAR
@@ -67,9 +69,11 @@
             <li class="active">Scan</li>
           </ol>
         </div>
-            <input type="file" capture="camera" accept="image/*" id="cameraInput" name="cameraInput" align="center">
-            <a href="/workout">Upload Photo</a></li>
-            <h3>To scan a QR code. First press "Choose File" to take a picture with your phone. And then press "Upload" to upload it.</h3>
+        <div class="container">
+            <div class="fileUpload btn btn-primary">
+              <span>Scan a QR code</span>
+              <input type="file" class="upload" capture="camera" accept="image/*" id="cameraInput" name="cameraInput" align="center"/>
+            </div>
         </div><!-- /.col-lg-4 -->
       </div><!-- /.row -->
     </div><!-- /.container -->
