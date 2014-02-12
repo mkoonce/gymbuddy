@@ -1,4 +1,3 @@
-Lab 5
-====
+GymBuddy application for CSE 170 at UCSD
 
-Lab 5: Putting it together
+Created by Matthew Koonce, Mana Jammalamadaka and Sara Millar
