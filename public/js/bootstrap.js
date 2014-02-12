@@ -1812,6 +1812,11 @@ if (typeof jQuery === 'undefined') { throw new Error('Bootstrap requires jQuery'
 
 }(jQuery);
 
+$('#myTab a').click(function (e) {
+  e.preventDefault()
+  $(this).tab('show')
+})
+
 /* ========================================================================
  * Bootstrap: affix.js v3.1.0
  * http://getbootstrap.com/javascript/#affix
