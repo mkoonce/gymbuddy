@@ -23,13 +23,13 @@
 					"rounds": [
 						{
 							"number": "1",
-							"reps": "30",
-							"weight": "40"
+							"reps": "10",
+							"weight": "30"
 						},
 						{
 							"number": "2",
 							"reps": "20",
-							"weight": "50"
+							"weight": "40"
 						}
 					]
 				}

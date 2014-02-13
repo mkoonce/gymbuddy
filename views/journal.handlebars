@@ -80,16 +80,13 @@
                     </tr>
                   </thead>
                   <tbody>
-                      <tr id="day1-round1">
-                        <td>1</td>
-                        <td>20</td>
-                        <td>30</td>
-                      </tr>
-                      <tr id="day1-round2">
-                        <td>2</td>
-                        <td>30</td>
-                        <td>40</td>
-                      </tr>
+                      {{#each rounds}}
+                        <tr>
+                          <td>{{number}}</td>
+                          <td>{{reps}}</td>
+                          <td>{{weight}}</td>
+                        </tr>
+                      {{/each}}
                   </tbody>
                 </table>
               {{/each}}
