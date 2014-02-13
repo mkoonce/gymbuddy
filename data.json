@@ -1,18 +1,37 @@
 {
 	"workouts": [
 		{
-			"activity": "Leg Press",
 			"date": "Feb 2 2014",
-			"rounds": [
+			"activities": [
 				{
-					"number": "1",
-					"reps": "30",
-					"weight": "40"
+					"activity": "Leg Press",
+					"rounds": [
+						{
+							"number": "1",
+							"reps": "30",
+							"weight": "40"
+						},
+						{
+							"number": "2",
+							"reps": "20",
+							"weight": "50"
+						}
+					]
 				},
 				{
-					"number": "2",
-					"reps": "20",
-					"weight": "50"
+					"activity": "Weight Curl",
+					"rounds": [
+						{
+							"number": "1",
+							"reps": "30",
+							"weight": "40"
+						},
+						{
+							"number": "2",
+							"reps": "20",
+							"weight": "50"
+						}
+					]
 				}
 			]
 		}
