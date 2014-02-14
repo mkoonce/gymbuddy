@@ -24,7 +24,7 @@ function processImage(e){
         fileDisplayArea.innerHTML = "";
 
         var img = new Image();
-        img.width = "400";
+        img.width = "100";
         img.src = reader.result;
 
         fileDisplayArea.appendChild(img);
