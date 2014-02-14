@@ -67,34 +67,42 @@
         <div class="col-lg-4">
           <h2>My Journal</h2>
           <div id="all_workouts">
-            {{#each workouts}}
-              <div class="panel panel-default">
-                <div class="panel-heading">{{date}}</div>
-                <div class="panel-body">
-                  {{#each this.activities}}
-                    <h4><a href="workout">{{activity}}</a></h4>
-                    <table class="table">
-                      <thead>
-                        <tr>
-                          <th>Round</th>
-                          <th>Reps</th>
-                          <th>Weight</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                          {{#each rounds}}
+            <div class="panel-group">
+              {{#each workouts}}
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <div class="panel-title">
+                      <a data-toggle="collapse" data-parent="#accordion" href="#collapse{{id}}">{{date}}</a>
+                    </div>
+                  </div>
+                  <div id="collapse{{id}}" class="panel-collapse collapse">
+                    <div class="panel-body">
+                      {{#each this.activities}}
+                        <h4><a href="workout">{{activity}}</a></h4>
+                        <table class="table">
+                          <thead>
                             <tr>
-                              <td>{{number}}</td>
-                              <td>{{reps}}</td>
-                              <td>{{weight}}</td>
+                              <th>Round</th>
+                              <th>Reps</th>
+                              <th>Weight</th>
                             </tr>
-                          {{/each}}
-                      </tbody>
-                    </table>
-                  {{/each}}
+                          </thead>
+                          <tbody>
+                            {{#each rounds}}
+                              <tr>
+                                <td>{{number}}</td>
+                                <td>{{reps}}</td>
+                                <td>{{weight}}</td>
+                              </tr>
+                            {{/each}}
+                          </tbody>
+                        </table>
+                      {{/each}}
+                    </div><!-- /.panel-body -->
+                  </div><!-- /.panel-collapse -->
                 </div><!-- /.panel -->
-              </div><!-- /.panel-body -->
-            {{/each}}
+              {{/each}}
+            </div><!-- /.panel-group -->
           </div>
         </div><!-- /.col-lg-4 -->
       </div><!-- /.row -->
