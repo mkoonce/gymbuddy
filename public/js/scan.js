@@ -24,6 +24,7 @@ function processImage(e){
         fileDisplayArea.innerHTML = "";
 
         var img = new Image();
+        img.width = "400";
         img.src = reader.result;
 
         fileDisplayArea.appendChild(img);
@@ -34,4 +35,6 @@ function processImage(e){
 
     reader.readAsDataURL(file); 
 }
+
+
 
