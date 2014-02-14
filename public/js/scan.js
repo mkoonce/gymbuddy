@@ -5,13 +5,15 @@ $(document).ready(function() {
 function initializePage() {
      var fileInput = document.getElementById('fileInput');
     var fileDisplayArea = document.getElementById('fileDisplayArea');
-
+    var submitBtn = document.getElementById('submitBtn');
+   
     fileInput.addEventListener('change', processImage);
+    fileInput.addEventListener('click', sumbitBtnPress);
 }
 
 function read(a)
 {
-    window.open(window.location.origin + a);
+     window.location.href = window.location.origin + a;
 }
 
 function processImage(e){
