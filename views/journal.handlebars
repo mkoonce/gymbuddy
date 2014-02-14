@@ -68,28 +68,32 @@
           <h2>My Journal</h2>
           <div id="all_workouts">
             {{#each workouts}}
-              <h3>{{date}}</h3>
-              {{#each this.activities}}
-                <h4>{{activity}}</h4>
-                <table class="table">
-                  <thead>
-                    <tr>
-                      <th>Round</th>
-                      <th>Reps</th>
-                      <th>Weight</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                      {{#each rounds}}
+              <div class="panel panel-default">
+                <div class="panel-heading">{{date}}</div>
+                <div class="panel-body">
+                  {{#each this.activities}}
+                    <h4>{{activity}}</h4>
+                    <table class="table">
+                      <thead>
                         <tr>
-                          <td>{{number}}</td>
-                          <td>{{reps}}</td>
-                          <td>{{weight}}</td>
+                          <th>Round</th>
+                          <th>Reps</th>
+                          <th>Weight</th>
                         </tr>
-                      {{/each}}
-                  </tbody>
-                </table>
-              {{/each}}
+                      </thead>
+                      <tbody>
+                          {{#each rounds}}
+                            <tr>
+                              <td>{{number}}</td>
+                              <td>{{reps}}</td>
+                              <td>{{weight}}</td>
+                            </tr>
+                          {{/each}}
+                      </tbody>
+                    </table>
+                  {{/each}}
+                </div>
+              </div>
             {{/each}}
           </div>
         </div><!-- /.col-lg-4 -->
