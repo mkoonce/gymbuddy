@@ -104,17 +104,30 @@
                     </div><!-- /input-group -->
                   </div><!-- /form-group -->
                 </form>
-                <a class="btn btn-default deleteround" roundid="1">- Delete round</a>
+                <a class="btn btn-default deleteround" roundid="1"><span class="glyphicon glyphicon-minus"></span> Delete round</a>
               </div><!-- /panel-body -->
             </div><!-- /panel -->
           </div><!-- /rounds -->
-          <a class="btn btn-default" id="addanother">+ Add round</a>
+          <a class="btn btn-default" id="addanother"><span class="glyphicon glyphicon-plus"></span> Add round</a>
           <div class="container" style="margin-top:20px">
-            <a href="/scan" class="btn btn-lg btn-primary">Save to My Journal</a>
+            <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Save to My Journal</button>
           </div>
         </div><!-- /.col-lg-4 -->
       </div><!-- /.row -->
     </div><!-- /.container -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+            <p>Successfully saved to my journal!</p>
+            <a href="/journal" type="button" class="btn btn-primary">Go To My Journal</a>
+            <a href="/scan" type="button" class="btn btn-primary">Scan Another</a>
+          </div>
+        </div>
+      </div>
+    </div>
 
 
     <!-- Bootstrap core JavaScript
