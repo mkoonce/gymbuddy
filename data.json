@@ -5,7 +5,8 @@
 			"date": "Feb 2 2014",
 			"activities": [
 				{
-					"activity": "Leg Press",
+					"activity": "Seated Row",
+					"link": "/seatedrow",
 					"rounds": [
 						{
 							"number": "1",
@@ -20,7 +21,8 @@
 					]
 				},
 				{
-					"activity": "Weight Curl",
+					"activity": "Leg Press",
+					"link": "/seatedrow",
 					"rounds": [
 						{
 							"number": "1",
@@ -41,7 +43,8 @@
 			"date": "Feb 4 2014",
 			"activities": [
 				{
-					"activity": "Leg Press",
+					"activity": "Seated Row",
+					"link": "/seatedrow",
 					"rounds": [
 						{
 							"number": "1",
