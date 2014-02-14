@@ -34,6 +34,21 @@
 					]
 				}
 			]
+		},
+		{
+			"date": "Feb 4 2014",
+			"activities": [
+				{
+					"activity": "Leg Press",
+					"rounds": [
+						{
+							"number": "1",
+							"reps": "30",
+							"weight": "50"
+						}
+					]
+				}
+			]
 		}
 	]
 }
