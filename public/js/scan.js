@@ -13,7 +13,7 @@ function initializePage() {
 
 function read(a)
 {
-     window.location.href = window.location.origin + a;
+     window.location = window.location.origin + a;
 }
 
 function processImage(e){
