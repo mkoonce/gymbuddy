@@ -72,7 +72,7 @@
                 <div class="panel-heading">{{date}}</div>
                 <div class="panel-body">
                   {{#each this.activities}}
-                    <h4>{{activity}}</h4>
+                    <h4><a href="workout">{{activity}}</a></h4>
                     <table class="table">
                       <thead>
                         <tr>
@@ -92,8 +92,8 @@
                       </tbody>
                     </table>
                   {{/each}}
-                </div>
-              </div>
+                </div><!-- /.panel -->
+              </div><!-- /.panel-body -->
             {{/each}}
           </div>
         </div><!-- /.col-lg-4 -->
