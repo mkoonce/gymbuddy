@@ -14,7 +14,7 @@ var journal = require('./routes/journal');
 var profile = require('./routes/profile');
 var scan = require('./routes/scan');
 var signin = require('./routes/signin');
-var workout = require('./routes/workout');
+var seatedrow = require('./routes/seatedrow');
 // Example route
 // var user = require('./routes/user');
 
@@ -47,7 +47,7 @@ app.get('/journal', journal.view);
 app.get('/profile', profile.view);
 app.get('/scan', scan.view);
 app.get('/signin', signin.view);
-app.get('/workout', workout.view);
+app.get('/seatedrow', seatedrow.view);
 // Example route
 // app.get('/users', user.list);
 

@@ -1,37 +1,54 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="shortcut icon" href="assets/ico/favicon.ico">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="shortcut icon" href="assets/ico/favicon.ico">
 
-    <title>GymBuddy</title>
+  <title>GymBuddy</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Just for debugging purposes. Don't actually copy this line! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+  <!-- Just for debugging purposes. Don't actually copy this line! -->
+  <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
 
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+      <![endif]-->
 
-    <!-- Custom styles for this template -->
-    <link href="css/carousel.css" rel="stylesheet">
-    <link href="css/workout.css" rel="stylesheet">
-    <link href="css/scan.css" rel="stylesheet">
+      <!-- Custom styles for this template -->
+      <link href="css/carousel.css" rel="stylesheet">
+      <link href="css/workout.css" rel="stylesheet">
+      <link href="css/scan.css" rel="stylesheet">
 
+      <script type="text/javascript" src="js/grid.js"></script>
+      <script type="text/javascript" src="js/version.js"></script>
+      <script type="text/javascript" src="js/detector.js"></script>
+      <script type="text/javascript" src="js/formatinf.js"></script>
+      <script type="text/javascript" src="js/errorlevel.js"></script>
+      <script type="text/javascript" src="js/bitmat.js"></script>
+      <script type="text/javascript" src="js/datablock.js"></script>
+      <script type="text/javascript" src="js/bmparser.js"></script>
+      <script type="text/javascript" src="js/datamask.js"></script>
+      <script type="text/javascript" src="js/rsdecoder.js"></script>
+      <script type="text/javascript" src="js/gf256poly.js"></script>
+      <script type="text/javascript" src="js/gf256.js"></script>
+      <script type="text/javascript" src="js/decoder.js"></script>
+      <script type="text/javascript" src="js/qrcode.js"></script>
+      <script type="text/javascript" src="js/findpat.js"></script>
+      <script type="text/javascript" src="js/alignpat.js"></script>
+      <script type="text/javascript" src="js/databr.js"></script>
 
-  </head>
+    </head>
 <!-- NAVBAR
-================================================== -->
+  ================================================== -->
   <body>
     <div class="navbar-wrapper">
       <div class="container">
@@ -56,7 +73,6 @@
             </div>
           </div>
         </div>
-
       </div>
     </div>
 
@@ -65,18 +81,23 @@
       <div class="row" style="margin-top:-20px">
         <div class="col-lg-4" style="margin-top:100px">
           <div class="container" style="width:300px">
-          <ol class="breadcrumb">
-            <li class="active">Scan</li>
-          </ol>
-        </div>
-        <div class="container">
-            <div class="fileUpload btn btn-primary">
-              <span>Scan a QR code</span>
-              <input type="file" class="upload" capture="camera" accept="image/*" id="cameraInput" name="cameraInput" align="center"/>
-            </div>
-        </div><!-- /.col-lg-4 -->
-      </div><!-- /.row -->
-    </div><!-- /.container -->
+            <ol class="breadcrumb">
+              <li class="active">Scan</li>
+            </ol>
+          </div>
+          <div class="container">
+            <h2> do some stuff yo </h2>
+            <form id="scanForm" role="form">
+              <div class="fileUpload btn btn-primary">
+                <span>Take a photo of a QR Code</span>
+                <input id="fileInput" type="file" class="upload" capture="camera" accept="image/*" id="cameraInput" name="cameraInput" align="center" class="form-control"/>
+              </div>
+              <!-- <button id="submitBtn" type="button" class="btn btn-default">Submit</button> -->
+              <div id="fileDisplayArea"></div>          
+            </form>   
+          </div><!-- /.col-lg-4 -->
+        </div><!-- /.row -->
+      </div><!-- /.container -->
 
 
     <!-- Bootstrap core JavaScript
@@ -84,6 +105,6 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="assets/js/docs.min.js"></script>
+    <script src="js/scan.js"></script>
   </body>
-</html>
+  </html>
