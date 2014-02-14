@@ -29,13 +29,13 @@ function processImage(e){
         fileDisplayArea.innerHTML = "";
 
         var img = new Image();
-        img.width = "200";
         img.src = reader.result;
+        img.width = "200";
 
         fileDisplayArea.appendChild(img);
 
         qrcode.callback = read;
-        qrcode.decode(img.src);
+        qrcode.decode(reader.result);
     }
 
     reader.readAsDataURL(file); 
