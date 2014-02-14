@@ -5,15 +5,18 @@ $(document).ready(function() {
 function initializePage() {
      var fileInput = document.getElementById('fileInput');
     var fileDisplayArea = document.getElementById('fileDisplayArea');
-    var submitBtn = document.getElementById('submitBtn');
-   
+    var submitBtnArea = document.getElementById('submitBtnArea');
+
     fileInput.addEventListener('change', processImage);
-    fileInput.addEventListener('click', sumbitBtnPress);
 }
 
-function read(a)
-{
-     window.location = window.location.origin + a;
+function read(e){
+   var button = document.createElement("a");
+   button.setAttribute("class", "btn btn-lg btn-primary"); 
+   button.setAttribute("role", "button"); 
+   button.setAttribute("href", e); 
+   button.innerHTML = "Submit";
+   submitBtnArea.appendChild(button);
 }
 
 function processImage(e){
