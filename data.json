@@ -1,59 +1,67 @@
-{
-	"workouts": [
+[
+	{
+		"id": "1",
+		"name": "Experienced User",
+		"workouts": [
 		{
 			"id": "1",
 			"date": "Feb 2 2014",
 			"activities": [
+			{
+				"activity": "Seated Row",
+				"link": "/seatedrow",
+				"rounds": [
 				{
-					"activity": "Seated Row",
-					"link": "/seatedrow",
-					"rounds": [
-						{
-							"number": "1",
-							"reps": "30",
-							"weight": "40"
-						},
-						{
-							"number": "2",
-							"reps": "20",
-							"weight": "50"
-						}
-					]
+					"number": "1",
+					"reps": "30",
+					"weight": "40"
 				},
 				{
-					"activity": "Leg Press",
-					"link": "/seatedrow",
-					"rounds": [
-						{
-							"number": "1",
-							"reps": "10",
-							"weight": "30"
-						},
-						{
-							"number": "2",
-							"reps": "20",
-							"weight": "40"
-						}
-					]
+					"number": "2",
+					"reps": "20",
+					"weight": "50"
 				}
+				]
+			},
+			{
+				"activity": "Leg Press",
+				"link": "/seatedrow",
+				"rounds": [
+				{
+					"number": "1",
+					"reps": "10",
+					"weight": "30"
+				},
+				{
+					"number": "2",
+					"reps": "20",
+					"weight": "40"
+				}
+				]
+			}
 			]
 		},
 		{
 			"id": "2",
 			"date": "Feb 4 2014",
 			"activities": [
+			{
+				"activity": "Seated Row",
+				"link": "/seatedrow",
+				"rounds": [
 				{
-					"activity": "Seated Row",
-					"link": "/seatedrow",
-					"rounds": [
-						{
-							"number": "1",
-							"reps": "30",
-							"weight": "50"
-						}
-					]
+					"number": "1",
+					"reps": "30",
+					"weight": "50"
 				}
+				]
+			}
 			]
 		}
-	]
-}
+		]
+	},
+	{
+		"id": "2",
+		"name": "New User"
+	}
+]
