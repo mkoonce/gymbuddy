@@ -155,15 +155,18 @@
             takePicture.onchange = function (event) {
               // var url = event.val(),
                 var  file = event.target.files[0];
-                var reader = new FileReader();
-               reader.onload = _readerLoadHandler;
-               reader.readAsDataURL(file);
-               function _readerLoadHandler( event ) {
-                  var data = event.target.result;   
-                  console.log(data);  
-                  showPicture.src = data;
-                  DecodeBar()
-                }
+                var mpImg = new MegaPixImage(file); 
+                mpImg.render(showPicture, { maxWidth: 250, orientation: 6 });
+                DecodeBar()
+               //  var reader = new FileReader();
+               // reader.onload = _readerLoadHandler;
+               // reader.readAsDataURL(file);
+               // function _readerLoadHandler( event ) {
+               //    var data = event.target.result;  
+               //    console.log(data);  
+               //    showPicture.src = data;
+               //    DecodeBar()
+               //  }
               // var files = event.target.files
               // if (files && files.length > 0) {
               //   file = files[0];
@@ -213,5 +216,7 @@
     <script src="js/bootstrap.min.js"></script>
     <!-- <script src="js/scan.js"></script> -->
     <script src="js/pixastic.custom.js"></script>
+    <script src="js/megapix-image.js"></script>
+    
   </body>
   </html>
