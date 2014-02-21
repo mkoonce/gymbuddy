@@ -90,27 +90,114 @@
             <form id="scanForm" role="form">
               <div class="fileUpload btn btn-primary">
                 <span>Take a photo of a QR Code</span>
-                <input id="fileInput" type="file" class="upload" capture="camera" id="cameraInput" name="cameraInput" align="center" class="form-control"/>
+                <input id="Take-Picture" type="file" class="upload" capture="camera" id="cameraInput" name="cameraInput" align="center" class="form-control"/>
               </div>
-            </form>   
+              <img width="320" height="240" src="" alt="" id="picture">
+            </form>  
           </div>
-          <div class="container">
+<!--           <div class="container">
             <div id="fileDisplayArea" width="300px"></div> 
-          </div>
+          </div> -->
           <div class="container" style="margin-top:15px">
             <div id="submitBtnArea" width="300px"></div> 
           </div>         
         </div><!-- /.col-lg-4 -->
       </div><!-- /.row -->
     </div><!-- /.container -->
-
+    <script type="text/javascript">
+          var takePicture = document.querySelector("#Take-Picture"),
+          showPicture = document.querySelector("#picture");
+          Result = document.querySelector("#textbit");
+          Canvas = document.createElement("canvas");
+          Canvas.width=640;
+          Canvas.height=480;
+          var resultArray = [];
+          ctx = Canvas.getContext("2d");
+          var workerCount = 0;
+          function receiveMessage(e) {
+            if(e.data.success === "log") {
+              console.log(e.data.result);
+              return;
+            }
+            workerCount--;
+            if(e.data.success){
+              var tempArray = e.data.result;
+              for(var i = 0; i < tempArray.length; i++) {
+                if(resultArray.indexOf(tempArray[i]) == -1) {
+                  resultArray.push(tempArray[i]);
+                }
+              }
+               // Result.innerHTML=resultArray.join("<br />");
+               var button = document.createElement("a");
+               button.setAttribute("class", "btn btn-lg btn-primary"); 
+               button.setAttribute("role", "button"); 
+               button.setAttribute("href", e.data.result); 
+               console.log(e);
+               button.innerHTML = "Submit";
+               var submitBtnArea = document.getElementById('submitBtnArea');
+               submitBtnArea.appendChild(button);
+            }else{
+              if(resultArray.length === 0 && workerCount === 0) {
+                Result.innerHTML="Decoding failed.";
+              }
+            }
+          }
+          var DecodeWorker = new Worker("/js/DecoderWorker.js");
+          var RightWorker = new Worker("/js/DecoderWorker.js");
+          var LeftWorker = new Worker("/js/DecoderWorker.js");
+          var FlipWorker = new Worker("/js/DecoderWorker.js");
+          DecodeWorker.onmessage = receiveMessage;
+          RightWorker.onmessage = receiveMessage;
+          LeftWorker.onmessage = receiveMessage;
+          FlipWorker.onmessage = receiveMessage;
+          if(takePicture && showPicture) {
+            takePicture.onchange = function (event) {
+              var files = event.target.files
+              if (files && files.length > 0) {
+                file = files[0];
+                try {
+                  var URL = window.URL || window.webkitURL;
+                  var imgURL = URL.createObjectURL(file);
+                  showPicture.src = imgURL;
+                  URL.revokeObjectURL(imgURL);
+                  DecodeBar()
+                }
+                catch (e) {
+                  try {
+                    var fileReader = new FileReader();
+                    fileReader.onload = function (event) {
+                      showPicture.src = event.target.result;
+                    };
+                    fileReader.readAsDataURL(file);
+                    DecodeBar()
+                  }
+                  catch (e) {
+                    // Result.innerHTML = "Neither createObjectURL or FileReader are supported";
+                  }
+                }
+              }
+            };
+          }
+          function DecodeBar(){
+            showPicture.onload = function(){
+              ctx.drawImage(showPicture,0,0,Canvas.width,Canvas.height);
+              resultArray = [];
+              workerCount = 4;
+              // Result.innerHTML="";
+              DecodeWorker.postMessage({pixels: ctx.getImageData(0,0,Canvas.width,Canvas.height).data, width: Canvas.width, height: Canvas.height, cmd: "normal"});
+              RightWorker.postMessage({pixels: ctx.getImageData(0,0,Canvas.width,Canvas.height).data, width: Canvas.width, height: Canvas.height, cmd: "right"});
+              LeftWorker.postMessage({pixels: ctx.getImageData(0,0,Canvas.width,Canvas.height).data, width: Canvas.width, height: Canvas.height, cmd: "left"});
+              FlipWorker.postMessage({pixels: ctx.getImageData(0,0,Canvas.width,Canvas.height).data, width: Canvas.width, height: Canvas.height, cmd: "flip"});
+            }
+          }
+        </script>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/scan.js"></script>
+    <!-- <script src="js/scan.js"></script> -->
     <script src="js/pixastic.custom.js"></script>
   </body>
   </html>

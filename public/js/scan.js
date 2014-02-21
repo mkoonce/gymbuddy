@@ -38,7 +38,7 @@ function processImage(e){
           {
             rect : 
             {
-              left : 700, top : 400, width : 1700, height : 1700
+              left : 700, top : 400, width : 1800, height : 1800
             }
           },
           function(e){
