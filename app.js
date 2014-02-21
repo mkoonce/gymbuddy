@@ -16,6 +16,8 @@ var scan = require('./routes/scan');
 var signin = require('./routes/signin');
 var seatedrow = require('./routes/seatedrow');
 var dumbbellsquat = require('./routes/dumbbellsquat');
+var seatedlegpress = require('./routes/seatedlegpress');
+
 
 // Example route
 // var user = require('./routes/user');
@@ -51,6 +53,8 @@ app.get('/scan', scan.view);
 app.get('/signin', signin.view);
 app.get('/seatedrow', seatedrow.view);
 app.get('/dumbbellsquat', dumbbellsquat.view);
+app.get('/seatedlegpress', seatedlegpress.view);
+
 
 // Example route
 // app.get('/users', user.list);
