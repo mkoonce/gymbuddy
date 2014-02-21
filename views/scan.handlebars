@@ -92,7 +92,6 @@
                 <span>Take a photo of a Barcode</span>
                 <input id="Take-Picture" type="file" class="upload" capture="camera" id="cameraInput" name="cameraInput" align="center" class="form-control"/>
               </div>
-              <!-- <div id="picture"></div> -->
               <img width="250" height="200" src="" alt="" id="picture">
             </form>  
           </div>
@@ -153,45 +152,31 @@
           FlipWorker.onmessage = receiveMessage;
           if(takePicture && showPicture) {
             takePicture.onchange = function (event) {
-              // var url = event.val(),
-                var  file = event.target.files[0];
-                var mpImg = new MegaPixImage(file); 
-                mpImg.render(showPicture, { maxWidth: 250, orientation: 6 });
-                DecodeBar()
-               //  var reader = new FileReader();
-               // reader.onload = _readerLoadHandler;
-               // reader.readAsDataURL(file);
-               // function _readerLoadHandler( event ) {
-               //    var data = event.target.result;  
-               //    console.log(data);  
-               //    showPicture.src = data;
-               //    DecodeBar()
-               //  }
-              // var files = event.target.files
-              // if (files && files.length > 0) {
-              //   file = files[0];
-              //   console.log(file);
-              //   try {
-              //     var URL = window.URL || window.webkitURL;
-              //     var imgURL = URL.createObjectURL(file);
-              //     showPicture.src = imgURL;
-              //     URL.revokeObjectURL(imgURL);
-              //     DecodeBar()
-              //   }
-              //   catch (e) {
-              //     try {
-              //       var fileReader = new FileReader();
-              //       fileReader.onload = function (event) {
-              //         showPicture.src = event.target.result;
-              //       };
-              //       fileReader.readAsDataURL(file);
-              //       DecodeBar()
-              //     }
-              //     catch (e) {
-              //       // Result.innerHTML = "Neither createObjectURL or FileReader are supported";
-              //     }
-              //   }
-              // }
+              var files = event.target.files
+              if (files && files.length > 0) {
+                file = files[0];
+                console.log(file);
+                try {
+                  var URL = window.URL || window.webkitURL;
+                  var imgURL = URL.createObjectURL(file);
+                  showPicture.src = imgURL;
+                  URL.revokeObjectURL(imgURL);
+                  DecodeBar()
+                }
+                catch (e) {
+                  try {
+                    var fileReader = new FileReader();
+                    fileReader.onload = function (event) {
+                      showPicture.src = event.target.result;
+                    };
+                    fileReader.readAsDataURL(file);
+                    DecodeBar()
+                  }
+                  catch (e) {
+                    // Result.innerHTML = "Neither createObjectURL or FileReader are supported";
+                  }
+                }
+              }
             };
           }
           function DecodeBar(){
@@ -216,7 +201,5 @@
     <script src="js/bootstrap.min.js"></script>
     <!-- <script src="js/scan.js"></script> -->
     <script src="js/pixastic.custom.js"></script>
-    <script src="js/megapix-image.js"></script>
-    
   </body>
   </html>
