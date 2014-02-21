@@ -4,7 +4,15 @@
 		"title": "Seated Row"
 	},
 	{
-		"path": "legpress",
-		"title": "Leg Press"
+		"path": "seatedlegpress",
+		"title": "Seated Leg Press"
+	},
+	{
+		"path": "dumbbellsquat",
+		"title": "Dumbbell Squat"
+	},
+	{
+		"path": "tricepdip",
+		"title": "Tricep Dip"
 	}
 ]
