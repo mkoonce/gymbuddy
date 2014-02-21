@@ -108,7 +108,8 @@
           var takePicture = document.querySelector("#Take-Picture"),
           showPicture = document.querySelector("#picture");
           Result = document.querySelector("#textbit");
-          Canvas = document.createElement("canvas");
+          var Canvas = fixCanvas(document.createElement('canvas'));
+         // document.body.appendChild(Canvas);
           Canvas.width=640;
           Canvas.height=480;
           var resultArray = [];
@@ -181,8 +182,7 @@
           }
           function DecodeBar(){
             showPicture.onload = function(){
-               var ctx = Canvas.getContext('2d');
-              ctx.drawImage(this, 0, 0, Canvas.width, Canvas.height);
+              ctx.drawImage(showPicture, 0, 0, Canvas.width, Canvas.height);
               //ctx.drawImage(showPicture,0,0,Canvas.width,Canvas.height);
               resultArray = [];
               workerCount = 4;
@@ -193,6 +193,7 @@
               FlipWorker.postMessage({pixels: ctx.getImageData(0,0,Canvas.width,Canvas.height).data, width: Canvas.width, height: Canvas.height, cmd: "flip"});
             }
           }
+var canvas;
           /**
  * 'Fixes' single canvas instances. 
  * Leaving the canvas html detection.
