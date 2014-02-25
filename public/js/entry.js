@@ -18,8 +18,8 @@ $('.qtyplus').click(function(e){
         // If is not undefined
         if (!isNaN(currentVal)) {
             // Increment
-            $('input[name='+fieldName+']').val(currentVal + 1);
-            $('input[name='+fieldName+']').attr('value', currentVal+1);
+            $('input[name='+fieldName+']').val(currentVal + 5);
+            $('input[name='+fieldName+']').attr('value', currentVal+5);
         } else {
             // Otherwise put a 0 there
             $('input[name='+fieldName+']').val(0);
@@ -37,8 +37,8 @@ $(".qtyminus").click(function(e) {
     // If it isn't undefined or its greater than 0
     if (!isNaN(currentVal) && currentVal > 0) {
         // Decrement one
-        $('input[name='+fieldName+']').val(currentVal - 1);
-        $('input[name='+fieldName+']').attr('value', currentVal-1);
+        $('input[name='+fieldName+']').val(currentVal - 5);
+        $('input[name='+fieldName+']').attr('value', currentVal-5);
     } else {
         // Otherwise put a 0 there
         $('input[name='+fieldName+']').val(0);
