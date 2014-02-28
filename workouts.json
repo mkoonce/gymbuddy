@@ -1,18 +1,26 @@
 [
 	{
 		"path": "seatedrow",
-		"title": "Seated Row"
+		"title": "Seated Row",
+		"defaultreps" : "10",
+		"defaultweight" : "50"
 	},
 	{
 		"path": "seatedlegpress",
-		"title": "Seated Leg Press"
+		"title": "Seated Leg Press",
+		"defaultreps" : "10",
+		"defaultweight" : "50"
 	},
 	{
 		"path": "dumbbellsquat",
-		"title": "Dumbbell Squat"
+		"title": "Dumbbell Squat",
+		"defaultreps" : "10",
+		"defaultweight" : "50"
 	},
 	{
 		"path": "tricepdip",
-		"title": "Tricep Dip"
+		"title": "Tricep Dip",
+		"defaultreps" : "10",
+		"defaultweight" : "50"
 	}
 ]
