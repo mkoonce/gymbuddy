@@ -4,6 +4,10 @@ jQuery(document).ready(function(){
     // This button will increment the value
     updateButtons();
 
+    var text_input = $('#autoselect');
+    text_input.focus();
+    text_input.select();
+
 });
 
 function updateButtons () {
