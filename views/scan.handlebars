@@ -81,15 +81,39 @@
       <div class="row" style="margin-top:-20px">
         <div class="col-lg-4" style="margin-top:100px">
           <div class="container" style="width:300px">
-            <ol class="breadcrumb">
-              <li class="active">Scan</li>
-            </ol>
-          </div>
           <div class="container">
             <h2> Barcode Scanner </h2>
+            <div class="panel-group">
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                      Instructions <span class="glyphicon glyphicon-chevron-down"></span>
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse">
+                  <div class="panel-body1">
+                    <ol>
+                      <li>Press the photo button and select the "camera" option on your phone</li>
+                      <li>Take a photo of the barcode</li>
+                      <li>Press the "submit" button</li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+            <div id="warningArea" class="hidden">
+              <div class="alert alert-danger alert-dismissable">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                <strong>Whoops!</strong> Something went wrong with the barcode scanner. Please try again!
+              </div>
+            </div>
+            
             <form id="scanForm" role="form">
               <div class="fileUpload btn btn-primary">
-                <span>Take a photo of a Barcode</span>
+                <span>Press here to take a barcode photo!</span>
                 <input id="Take-Picture" type="file" class="upload" capture="camera" id="cameraInput" name="cameraInput" align="center" class="form-control"/>
               </div>
               <img width="250" height="200" src="" alt="" id="picture">
@@ -98,8 +122,8 @@
 <!--           <div class="container">
             <div id="fileDisplayArea" width="300px"></div> 
           </div> -->
-          <div class="container" style="margin-top:15px">
-            <div id="submitBtnArea" width="300px"></div> 
+          <div class="container" style="margin-top:5px">
+            <a id="submitButton" class="btn btn-lg btn-default disabled" type="submit">Submit</a>
           </div>         
         </div><!-- /.col-lg-4 -->
       </div><!-- /.row -->
@@ -129,17 +153,19 @@
                 }
               }
                // Result.innerHTML=resultArray.join("<br />");
-               var button = document.createElement("a");
+               var button = document.getElementById("submitButton");
                button.setAttribute("class", "btn btn-lg btn-primary"); 
                button.setAttribute("role", "button"); 
                button.setAttribute("href", e.data.result); 
                console.log(e);
-               button.innerHTML = "Submit";
-               var submitBtnArea = document.getElementById('submitBtnArea');
-               submitBtnArea.appendChild(button);
+               //button.innerHTML = "Submit";
+               //var submitBtnArea = document.getElementById('submitBtnArea');
+               //submitBtnArea.appendChild(button);
             }else{
               if(resultArray.length === 0 && workerCount === 0) {
-                Result.innerHTML="Decoding failed.";
+                var error = document.getElementById('warningArea');
+                error.setAttribute('class', 'visible');
+                //Result.innerHTML="Decoding failed.";
               }
             }
           }
