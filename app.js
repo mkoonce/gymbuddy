@@ -18,6 +18,7 @@ var seatedrow = require('./routes/seatedrow');
 var dumbbellsquat = require('./routes/dumbbellsquat');
 var seatedlegpress = require('./routes/seatedlegpress');
 var tricepdip = require('./routes/tricepdip');
+var seatedlegpress_redesign = require('./routes/seatedlegpress_redesign');
 
 
 // Example route
@@ -55,6 +56,7 @@ app.get('/signin', signin.view);
 app.get('/seatedrow', seatedrow.view);
 app.get('/dumbbellsquat', dumbbellsquat.view);
 app.get('/seatedlegpress', seatedlegpress.view);
+app.get('/seatedlegpress_redesign', seatedlegpress_redesign.view);
 app.get('/tricepdip', tricepdip.view);
 
 
