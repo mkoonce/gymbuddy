@@ -35,7 +35,7 @@ $(".qtyminus").click(function(e) {
     // Get its current value
     var currentVal = parseInt($('input[name='+fieldName+']').val());
     // If it isn't undefined or its greater than 0
-    if (!isNaN(currentVal) && currentVal > 0) {
+    if (!isNaN(currentVal) && currentVal > 5) {
         // Decrement one
         $('input[name='+fieldName+']').val(currentVal - 5);
         $('input[name='+fieldName+']').attr('value', currentVal-5);
@@ -50,6 +50,12 @@ $('.deleteround').click(function() {
     var id = $(this).attr('roundid');
     var toDelete = $("#round" + id);
     toDelete.remove();
+});
+
+$('.qty').on('input', function() {
+    var currentVal = parseInt($(this).val());
+    $(this).val(currentVal);
+    $(this).attr('value', currentVal);
 });
 
 };
