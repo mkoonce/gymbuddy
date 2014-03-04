@@ -55,6 +55,7 @@ app.get('/signin', signin.view);
 app.get('/seatedrow', seatedrow.view);
 app.get('/dumbbellsquat', dumbbellsquat.view);
 app.get('/seatedlegpress', seatedlegpress.view);
+app.get('/seated-leg-press', seatedlegpress.viewRedesign);
 app.get('/tricepdip', tricepdip.view);
 
 
