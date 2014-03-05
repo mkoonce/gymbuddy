@@ -81,21 +81,21 @@
         </div>
         </div><!-- /.col-lg-4 -->
         <div class="container" align="center">
-           <p><a class="btn btn-lg btn-primary" href="/entry?lastPage=dumbbellsquat" role="button">Enter workout into My Journal &raquo;</a></p>
+           <p><a class="btn btn-lg btn-primary entry" href="/entry?lastPage=dumbbellsquat" role="button">Enter workout into My Journal &raquo;</a></p>
         </div>
       </div><!-- /.row -->
       {{#if redesign}}
       <div class="container" >
         <div class="bs-example bs-example-tabs">
           <ul id="myTab" class="nav nav-tabs">
-            <li class="active"><a href="#home" data-toggle="tab">How-To</a></li>
-            <li><a href="#profile" data-toggle="tab">Safety</a></li>
+            <li class="active"><a class="howto" href="#home" data-toggle="tab">How-To</a></li>
+            <li><a class="safety" href="#profile" data-toggle="tab">Safety</a></li>
             <li class="dropdown">
               <a href="#" id="myTabDrop1" class="dropdown-toggle" data-toggle="dropdown">Workouts <b class="caret"></b></a>
               <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1">
-                <li><a href="#dropdown1" tabindex="-1" data-toggle="tab">Beginner</a></li>
-                <li><a href="#dropdown2" tabindex="-1" data-toggle="tab">Intermediate</a></li>
-                <li><a href="#dropdown3" tabindex="-1" data-toggle="tab">Advanced</a></li>
+                <li><a class="beginner" href="#dropdown1" tabindex="-1" data-toggle="tab">Beginner</a></li>
+                <li><a class="intermediate" href="#dropdown2" tabindex="-1" data-toggle="tab">Intermediate</a></li>
+                <li><a class="advanced" href="#dropdown3" tabindex="-1" data-toggle="tab">Advanced</a></li>
               </ul>
             </li>
           </ul>
@@ -128,9 +128,9 @@
 
         <!-- Nav tabs -->
         <ul class="nav nav-tabs">
-          <li class="active"><a href="#beginner" data-toggle="tab">Beginner</a></li>
-          <li><a href="#intermediate" data-toggle="tab">Intermediate</a></li>
-          <li><a href="#advanced" data-toggle="tab">Advanced</a></li>
+          <li class="active"><a class="beginner" href="#beginner" data-toggle="tab">Beginner</a></li>
+          <li><a class="intermediate" href="#intermediate" data-toggle="tab">Intermediate</a></li>
+          <li><a class="advanced" href="#advanced" data-toggle="tab">Advanced</a></li>
         </ul>
 
         <!-- Tab panes -->
@@ -149,7 +149,7 @@
           <div class="panel panel-default">
             <div class="panel-heading">
               <h4 class="panel-title">
-                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                <a class="howto" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
                   Instructions <span class="glyphicon glyphicon-chevron-down"></span>
                 </a>
               </h4>
@@ -166,7 +166,7 @@
           <div class="panel panel-default">
             <div class="panel-heading">
               <h4 class="panel-title">
-                <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                <a class="safety" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
                   Injury Prevention Tips <span class="glyphicon glyphicon-chevron-down"></span>
                 </a>
               </h4>
@@ -194,6 +194,7 @@
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="assets/js/docs.min.js"></script>
+    <script src="js/workout.js"></script>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
