@@ -84,6 +84,45 @@
            <p><a class="btn btn-lg btn-primary" href="/entry?lastPage=tricepdip" role="button">Enter workout into My Journal &raquo;</a></p>
         </div>
       </div><!-- /.row -->
+      {{#if redesign}}
+      <div class="container" >
+        <div class="bs-example bs-example-tabs">
+          <ul id="myTab" class="nav nav-tabs">
+            <li class="active"><a href="#home" data-toggle="tab">How-To</a></li>
+            <li><a href="#profile" data-toggle="tab">Safety</a></li>
+            <li class="dropdown">
+              <a href="#" id="myTabDrop1" class="dropdown-toggle" data-toggle="dropdown">Workouts <b class="caret"></b></a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1">
+                <li><a href="#dropdown1" tabindex="-1" data-toggle="tab">Beginner</a></li>
+                <li><a href="#dropdown2" tabindex="-1" data-toggle="tab">Intermediate</a></li>
+                <li><a href="#dropdown3" tabindex="-1" data-toggle="tab">Advanced</a></li>
+              </ul>
+            </li>
+          </ul>
+          <div id="myTabContent" class="tab-content">
+            <div class="tab-pane fade in active" id="home">
+              <p> If possible, place handles in wide position. Sit on seat and grasp handles with oblique grip. Lean forward slightly. Push lever down with elbows away from body. Return until chest is slightly stretched. Repeat.</p>
+            </div>
+            <div class="tab-pane fade" id="profile">
+              <p><li>Be sure to <font color="red"><b>keep your back on the pad</font></b> to avoid strain to your neck</font></b>.</li>
+                      <li><b><font color="red">Keep a little bend</font></b> in your elbows to keep the tension off your elbows and on your triceps.</li>
+                      <li><b><font color="red">Do not</font></b> try Quarter Dips or Full Dips unless thoroughly practiced to avoid injury to the neck, shoulders, and elbows.</li></p>
+            </div>
+            <div class="tab-pane fade" id="dropdown1">
+              <p>To avoid leaning back excessively, have someone place their knee in your upper back between your shoulder blades. <br><b><font color="blue">Recommended Workout: </font></b>3 Rounds, 10 reps, start with 20lbs</p>
+            </div>
+            <div class="tab-pane fade" id="dropdown2">
+              <p>Try the <b>Dumbell Shoulder Press!</b> This will supplement your workout by using your shoulders as well. Position dumbbells to each side of shoulders with elbows below wrists. Press dumbbells upward until arms are extended overhead. Lower to sides of shoulders and repeat. <br><b><font color="blue">Recommended Workout: </font></b>3 Rounds, 10 reps each, start with 20lbs</p>
+            </div>
+            <div class="tab-pane fade" id="dropdown3">
+              <p>If you're looking for some variations on this workout, try doing <b>Quarter Tricep Dips</b> and <b>Full Tricep Dips</b>! Quarter Dips include doing a regular Tricep Dip but only a quarter of the way down with your arms, so that the muscles near your elbow gets a workout too! Full Tricep Dips include doing the regular Tricep Dip but all the way down, therefore getting a chest workout in the process! <br><b><font color="blue">Recommended Workout: </font></b>3 Rounds, 12 reps, start with 40lbs</p>
+            </div>
+          </div>
+        </div><!-- /example -->
+      </div><!-- /.container -->
+
+      {{else}}
+
       <div class="container" >
         <h3><center>How to use</center></h3>
 
@@ -140,8 +179,9 @@
           </div>
         </div>
         
-      </div>
-    </div><!-- /.container -->
+      </div><!-- /.container-->
+      {{/if}}
+    </div><!-- /.container marketing-->
 
    
 

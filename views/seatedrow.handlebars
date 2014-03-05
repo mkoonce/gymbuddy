@@ -84,6 +84,45 @@
            <p><a class="btn btn-lg btn-primary" href="/entry?lastPage=seatedrow" role="button">Enter workout into My Journal &raquo;</a></p>
         </div>
       </div><!-- /.row -->
+      {{#if redesign}}
+      <div class="container" >
+        <div class="bs-example bs-example-tabs">
+          <ul id="myTab" class="nav nav-tabs">
+            <li class="active"><a href="#home" data-toggle="tab">How-To</a></li>
+            <li><a href="#profile" data-toggle="tab">Safety</a></li>
+            <li class="dropdown">
+              <a href="#" id="myTabDrop1" class="dropdown-toggle" data-toggle="dropdown">Workouts <b class="caret"></b></a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1">
+                <li><a href="#dropdown1" tabindex="-1" data-toggle="tab">Beginner</a></li>
+                <li><a href="#dropdown2" tabindex="-1" data-toggle="tab">Intermediate</a></li>
+                <li><a href="#dropdown3" tabindex="-1" data-toggle="tab">Advanced</a></li>
+              </ul>
+            </li>
+          </ul>
+          <div id="myTabContent" class="tab-content">
+            <div class="tab-pane fade in active" id="home">
+              <p> Sit slightly forward on platform and grab cable attachment. Place feet on angled vertical platform. Pull cable attachment to waist while straightening lower back. Pull shoulders back and push chest forward while arching back. Return until arms are extended, shoulders are stretched forward, and lower back is flexed forward. Repeat.</p>
+            </div>
+            <div class="tab-pane fade" id="profile">
+              <p> <li>Be sure to <font color="red"><b>slide hips back</font></b> keeping <b><font color="red">knees slighty bent</font></b>.</li>
+                      <li><b><font color="red">Begin with lower weight</font></b> to allow the lower back to adapt adequately</li>
+                      <li><b><font color="red">Do not pause or bounce</font></b> at bottom of the lift</li></p>
+            </div>
+            <div class="tab-pane fade" id="dropdown1">
+              <p>To avoid leaning back excessively, have someone place their knee in your upper back between your shoulder blades. <br><b><font color="blue">Recommended Workout: </font></b>3 Rounds, 10 reps each, start with 20lbs</p>
+            </div>
+            <div class="tab-pane fade" id="dropdown2">
+              <p>Try <b>High Pulley Seated Rows</b>! To do these, place a V-bar to the end of the high pulley cable. If using a normal pull down bar, grip it close with an overhand grip. SIt back far and raise the weight stack while keeping your back straight. <br><b><font color="blue">Recommended Workout: </font></b>3 Rounds, 12 reps each, start with 35lbs</p>
+            </div>
+            <div class="tab-pane fade" id="dropdown3">
+              <p>If you're looking for a challenge, try <b>Seated One-Arm Cable Rows</b>! They are done with a single-handed handle instead of a v-bar or straight bar or other. Be far enough away so that your lat is completely stretched when your arm is completely extended. <br><b><font color="blue">Recommended Workout: </font></b>3 Rounds, 15 reps each, start with 70lbs</p>
+            </div>
+          </div><!-- /myTabContent -->
+        </div><!-- /example -->
+      </div><!-- /container -->
+
+      {{else}}
+
       <div class="container" >
         <h3><center>How to use</center></h3>
 
@@ -140,8 +179,9 @@
           </div>
         </div>
         
-      </div>
-    </div><!-- /.container -->
+      </div><!-- /.container -->
+      {{/if}}
+    </div><!-- /.container marketing -->
 
    
 

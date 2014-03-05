@@ -84,6 +84,45 @@
            <p><a class="btn btn-lg btn-primary" href="/entry?lastPage=dumbbellsquat" role="button">Enter workout into My Journal &raquo;</a></p>
         </div>
       </div><!-- /.row -->
+      {{#if redesign}}
+      <div class="container" >
+        <div class="bs-example bs-example-tabs">
+          <ul id="myTab" class="nav nav-tabs">
+            <li class="active"><a href="#home" data-toggle="tab">How-To</a></li>
+            <li><a href="#profile" data-toggle="tab">Safety</a></li>
+            <li class="dropdown">
+              <a href="#" id="myTabDrop1" class="dropdown-toggle" data-toggle="dropdown">Workouts <b class="caret"></b></a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1">
+                <li><a href="#dropdown1" tabindex="-1" data-toggle="tab">Beginner</a></li>
+                <li><a href="#dropdown2" tabindex="-1" data-toggle="tab">Intermediate</a></li>
+                <li><a href="#dropdown3" tabindex="-1" data-toggle="tab">Advanced</a></li>
+              </ul>
+            </li>
+          </ul>
+          <div id="myTabContent" class="tab-content">
+            <div class="tab-pane fade in active" id="home">
+              <p>Bend your knees forward while allowing your hips to bend back behind, keeping your back straight and knees pointed same direction as feet. Descend until your thighs are just past parallel to floor. Extend your knees and hips until your legs are straight. Return to starting position and repeat.</p>
+            </div>
+            <div class="tab-pane fade" id="profile">
+              <p> <li>Have an <font color="red"><b>equal distribution of weight</font></b>  through your forefoot and heel.</li>
+                      <li>If doing a lunge or step-up variation, <font color="red"><b>keep your torso upright</font></b> to avoid hip rotator injury.</li>
+                      <li>If your knees begin to experience pain, <b><font color="red">stop the exercise immediately</font></b> and perform some light walking until pain has subsided.</li></p>
+            </div>
+            <div class="tab-pane fade" id="dropdown1">
+              <p>Place your feet shoulder width apart to help distribute the weight evenly throughout your body. <br><b><font color="blue">Recommended Workout: </font></b>3 Rounds, 10 reps, start with 20lbs for each weight</p>
+            </div>
+            <div class="tab-pane fade" id="dropdown2">
+              <p>Try <b>Dumbbell Lunges</b>! Lunge forward with the first leg. Land on your heel then forefoot. Lower your body by flexing knee and hip of the front leg until the knee of rear leg is almost in contact with floor. Return to original standing position by forcibly extending the hip and knee of the forward leg. Repeat by alternating lunge with opposite leg.<br><b><font color="blue">Recommended Workout: </font></b>3 Rounds, 10 reps each leg, start with 35lbs for each weight</p>
+            </div>
+            <div class="tab-pane fade" id="dropdown3">
+              <p> If you're looking for a challenge, try <b>Dumbbell Step-Ups</b>! Place the foot of the first leg on a bench. Stand on the bench by extending the hip and knee of the first leg and place the foot of your second leg on bench. Step down with the second leg by flexing the hip and knee of the first leg. Return to original standing position by placing the foot of the first leg to floor. Repeat first step with opposite leg alternating first steps between legs. <br><b><font color="blue">Recommended Workout: </font></b>3 Rounds, 15 reps each leg, start with 45lbs for each weight</p>
+            </div>
+          </div>
+        </div><!-- /example -->
+      </div><!-- /.container -->
+
+      {{else}}
+
       <div class="container" >
         <h3><center>How to use</center></h3>
 
@@ -142,8 +181,9 @@
           </div>
         </div>
         
-      </div>
-    </div><!-- /.container -->
+      </div><!-- /.container -->
+      {{/if}}
+    </div><!-- /.container marketing-->
 
    
 

@@ -53,10 +53,13 @@ app.get('/profile', profile.view);
 app.get('/scan', scan.view);
 app.get('/signin', signin.view);
 app.get('/seatedrow', seatedrow.view);
+app.get('/seated-row', seatedrow.viewRedesign);
 app.get('/dumbbellsquat', dumbbellsquat.view);
+app.get('/dumbbell-squat', dumbbellsquat.viewRedesign);
 app.get('/seatedlegpress', seatedlegpress.view);
 app.get('/seated-leg-press', seatedlegpress.viewRedesign);
 app.get('/tricepdip', tricepdip.view);
+app.get('/tricep-dip', tricepdip.viewRedesign);
 
 
 // Example route
