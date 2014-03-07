@@ -8,7 +8,6 @@ function initializePage() {
 	$(".beginner").click(sendBeginner);
 	$(".intermediate").click(sendIntermediate);
 	$(".advanced").click(sendAdvanced);
-	$(".entry").click(sendEntry);
 }
 
 function sendSafety(e){
@@ -34,9 +33,4 @@ function sendIntermediate(e){
 function sendAdvanced(e){
 	e.preventDefault();
 	ga('send', 'event', 'workoutadvanced', 'click');
-}
-
-function sendEntry(e){
-	e.preventDefault();
-	ga('send', 'event', 'workoutentry', 'click');
 }
