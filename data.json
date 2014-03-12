@@ -5,7 +5,7 @@
 		"workouts": [
 		{
 			"id": "1",
-			"date": "Feb 2 2014",
+			"date": "March 12 2014",
 			"activities": [
 			{
 				"activity": "Seated Row",
@@ -13,13 +13,13 @@
 				"rounds": [
 				{
 					"number": "2",
-					"reps": "30",
-					"weight": "40"
+					"reps": "10",
+					"weight": "20"
 				},
 				{
 					"number": "2",
-					"reps": "20",
-					"weight": "50"
+					"reps": "10",
+					"weight": "20"
 				}
 				]
 			},
@@ -34,8 +34,8 @@
 				},
 				{
 					"number": "2",
-					"reps": "12",
-					"weight": "40"
+					"reps": "10",
+					"weight": "30"
 				}
 				]
 			}
@@ -43,7 +43,7 @@
 		},
 		{
 			"id": "2",
-			"date": "Feb 4 2014",
+			"date": "March 13 2014",
 			"activities": [
 			{
 				"activity": "Seated Row",
@@ -51,8 +51,8 @@
 				"rounds": [
 				{
 					"number": "3",
-					"reps": "12",
-					"weight": "50"
+					"reps": "10",
+					"weight": "30"
 				}
 				]
 			}
