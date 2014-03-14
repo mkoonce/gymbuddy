@@ -83,27 +83,29 @@
           <div class="container" style="width:300px">
           <div class="container">
             <h2> Barcode Scanner </h2>
-            <div class="panel-group">
-              <div class="panel panel-default">
-                <div class="panel-heading">
-                  <h4 class="panel-title">
-                  
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-                      Instructions <span class="glyphicon glyphicon-chevron-down"></span>
-                    </a>
-                  </h4>
-                </div>
-                <div id="collapseOne" class="panel-collapse collapse">
-                  <div class="panel-body1">
-                    <ol>
-                      <li>Press the photo button and select the "camera" option on your phone</li>
-                      <li>Take a photo of the barcode</li>
-                      <li>Press the "submit" button</li>
-                    </ol>
-                  </div>
-                </div>
-              </div>
+            <h5> <font color="green"><b>Instructions:</b></font> This is a barcode scanner simulation. Of the 4 options below, pick a workout machine. Then click on its corresponding barcode image. </h5>
+
+
+            <div class="thumbnail">
+              <img src="images/db_squat.png" width="100px"> 
+              <a href="/dumbbellsquat" class="btn btn-primary" role="button">Dumbbell Squats</a>
             </div>
+
+            <div class="thumbnail">
+              <img src="images/tricep_dip.png" width="100px"> 
+              <a href="/tricepdip" class="btn btn-primary" role="button">Tricep Dips</a>
+            </div>
+
+            <div class="thumbnail">
+              <img src="images/seated_leg_press.png" width="100px"> 
+              <a href="/seatedlegpress" class="btn btn-primary" role="button">Seated Leg Press</a>
+            </div>
+
+            <div class="thumbnail">
+              <img src="images/seated_row.png" width="100px"> 
+              <a href="/seatedrow" class="btn btn-primary" role="button">Seated Row</a>
+            </div>
+
           </div>
             <div id="warningArea" class="hidden">
               <div class="alert alert-danger alert-dismissable">
@@ -111,24 +113,15 @@
                 <strong>Whoops!</strong> Something went wrong with the barcode scanner. Please try again!
               </div>
             </div>
-            
-            <form id="scanForm" role="form">
-              <div class="fileUpload btn btn-primary" style="margin-top:-10px">
-                <span>Press here to take a barcode photo!</span>
-                <input id="Take-Picture" type="file" class="upload" capture="camera" id="cameraInput" name="cameraInput" align="center" class="form-control"/>
-              </div>
-              <img width="250" height="200" src="" alt="" id="picture">
-            </form>  
           </div>
-<!--           <div class="container">
+
+        <!--   <div class="container">
             <div id="fileDisplayArea" width="300px"></div> 
-          </div> -->
-          <div class="container" style="margin-top:5px">
-            <a id="submitButton" class="btn btn-lg btn-default disabled" type="submit">Submit</a>
-          </div>         
+          </div>  -->        
         </div><!-- /.col-lg-4 -->
       </div><!-- /.row -->
     </div><!-- /.container -->
+
     <script type="text/javascript">
           var takePicture = document.querySelector("#Take-Picture"),
           showPicture = document.querySelector("#picture");
